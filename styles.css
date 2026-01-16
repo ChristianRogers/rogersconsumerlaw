@@ -1,0 +1,119 @@
+:root {
+  --primary-color: #234518;
+  --secondary-color: #d1dbcd;
+  --accent2-color: #c5a059;
+  --accent-color: #5e8152;
+  --text-on-primary: #ffffff;
+  --text-on-secondary: #000000;
+  --text-on-accent: #000000;
+
+  --heading-font: "Palatino Linotype", "Palatino", serif;
+  --body-font: "Georgia", "Times New Roman", serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  background-color: var(--secondary-color);
+  color: var(--text-on-secondary);
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--text-on-primary);
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+header h1 {
+  font-family: var(--heading-font);
+  font-variant: small-caps;
+  font-weight: normal;
+}
+
+nav {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav a {
+  color: var(--text-on-primary);
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #5e8152;
+  padding-bottom: 1rem;
+  width: 100%;
+  font-family: var(--heading-font);
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: var(--text-on-primary);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+main {
+  flex: 1;
+  margin: 0 auto;
+  background-color: var(--secondary-color);
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-on-primary);
+  border-top: 2px solid var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  font-family: var(--body-font);
+}
+
+@media screen and (min-width: 639px) {
+  .hidden {
+    display: unset;
+  }
+
+  nav {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  nav a {
+    border-bottom: none;
+    padding-bottom: 0;
+    width: auto;
+    font-size: 1rem;
+    margin: auto 15px;
+  }
+
+  nav a:hover {
+    border-bottom: 2px solid var(--accent2-color);
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  footer {
+    justify-content: left;
+  }
+  footer p {
+    padding-left: 40px;
+  }
+}
