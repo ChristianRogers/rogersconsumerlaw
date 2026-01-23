@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,26 +9,56 @@
     <meta name="author" content="Jon Rogers" />
     <meta
       name="description"
-      content="Jon H. Rogers is a licensed, Utah Attorney with over 30 years of
-      experience handling civil (as opposed to criminal) matters."
+      content="Jon H. Rogers is a licensed, Utah Attorney with over 30 years of experience handling civil (as opposed to criminal) matters."
     />
     <script src="script.js" defer></script>
   </head>
-
   <body>
     <header>
       <h1>Jon H. Rogers, Attorney at Law</h1>
-      <button class="menu-toggle">☰</button>
-      <nav class="hidden">
+      <button
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        ☰
+      </button>
+      <nav id="primary-navigation" class="hidden" aria-hidden="true">
         <a href="index.html">Home</a>
-        <a href="estate.html">Estate Planning</a>
-        <a href="auto.html">Auto Law</a>
+        <a href="suedinutah.html">Sued in Utah?</a>
         <a href="debt.html">Debt Collection</a>
+        <a href="auto.html">Auto Law</a>
+        <a href="estate.html">Estate Planning</a>
         <a href="about.html">About</a>
       </nav>
     </header>
 
-    <main></main>
+    <main>
+      <div class="hero">
+        <h2>Your Utah Consumer Lawyer</h2>
+        <p>
+          Welcome to Jon H. Rogers' Consumer Law Office Website.<br />
+          This office concentrates on consumer law issues. We are committed to
+          fighting for abused consumers in the State of Utah. <br />
+          Jon H. Rogers has over <span class="years-in-operation"></span> years
+          of experience dealing with consumer law issues.
+        </p>
+      </div>
+
+      <section id="practice-areas">
+        <h2>We May Be Able to Help You With</h2>
+        <ul>
+          <li>Debt Negotiation or Debt Collection Defense (Non-Bankruptcy)</li>
+          <li>Bankruptcy</li>
+          <li>Autofraud or Car Dealer Problems</li>
+          <li>Contract and Warranty Disputes</li>
+          <li>Lemon Law</li>
+          <li>Credit Reporting Inaccuracies</li>
+          <li>Abusive Collection Agencies</li>
+          <li>Other Consumer Problems</li>
+          <li>Estate Planning including Wills and Trusts</li>
+        </ul>
+    </main>
 
     <footer>
       <p>&copy; <span id="current-year"></span> Jon H. Rogers</p>
