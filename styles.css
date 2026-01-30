@@ -122,6 +122,7 @@ footer p {
 #legal-disclaimer {
   color: var(--secondary-color);
   text-align: center;
+  max-width: 90%;
 }
 
 /* Main Page Styles */
