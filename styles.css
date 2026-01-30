@@ -145,17 +145,21 @@ footer p {
 
 #practice-areas {
   background-color: var(--primary-color);
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 90%;
   padding: 20px;
   margin: 20px;
-  margin-bottom: 0;
   color: var(--text-on-primary);
   border-radius: 20px;
 }
 
 #practice-areas li {
-  list-style-type: none;
+  font-size: 1rem;
   margin: 10px 0;
+  list-style-type: none;
 }
 
 .content {
