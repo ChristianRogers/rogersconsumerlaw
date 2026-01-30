@@ -12,7 +12,7 @@
   if (yearsElement) {
     var currentYear = new Date();
     var MonthsSince =
-      (currentYear.getFullYear() - 1994) * 12 + (currentYear.getMonth() - 8);
+      (currentYear.getFullYear() - 1994) * 12 + (currentYear.getMonth() - 4);
     yearsElement.forEach(function (element) {
       element.textContent = Math.floor(MonthsSince / 12);
     });

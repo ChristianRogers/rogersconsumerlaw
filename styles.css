@@ -43,6 +43,7 @@ header h1 {
   font-variant: small-caps;
   font-weight: normal;
   margin-top: 0;
+  font-size: 3rem;
 }
 
 nav {
@@ -224,7 +225,7 @@ footer p {
   margin-bottom: 30px;
 }
 
-@media screen and (min-width: 639px) {
+@media screen and (min-width: 679px) {
   .hidden {
     display: unset;
   }
