@@ -157,6 +157,11 @@ footer p {
   border-radius: 20px;
 }
 
+#practice-areas h2 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
 #practice-areas li {
   font-size: 1rem;
   margin: 10px 0;
@@ -255,6 +260,11 @@ footer p {
 
   #practice-areas li {
     font-size: 1.1rem;
+    text-align: center;
+  }
+
+  #practice-areas h2 {
+    font-size: 1.8rem;
   }
 
   .contact-info p,
