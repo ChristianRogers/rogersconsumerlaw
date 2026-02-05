@@ -128,8 +128,7 @@ footer p {
 
 /* Main Page Styles */
 .hero {
-  padding: 10px;
-  padding-bottom: 30px;
+  padding: 10px 20px 30px 20px;
   text-align: center;
   background-color: var(--accent-color);
   color: var(--text-on-accent);
@@ -251,6 +250,11 @@ footer p {
   width: auto;
   margin: 0 auto;
   border-radius: 5px;
+}
+
+#hero-suedinutah h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
 @media screen and (min-width: 679px) {
