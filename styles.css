@@ -249,7 +249,8 @@ footer p {
   font-size: 1.1rem;
 }
 
-.textual-content p {
+.textual-content p,
+.textual-content li {
   font-size: 1.1rem;
 }
 
@@ -268,6 +269,14 @@ footer p {
 #hero-suedinutah h2 {
   font-size: 2.5rem;
   margin-bottom: 10px;
+}
+
+#estate-planning-terminology {
+  background-color: #5e8152;
+  color: var(--text-on-accent);
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid var(--primary-color);
 }
 
 @media screen and (min-width: 679px) {
