@@ -279,6 +279,128 @@ footer p {
   border: 2px solid var(--primary-color);
 }
 
+/* CONTACT FORM STYLES */
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  padding-top: 0;
+  padding-bottom: 40px;
+}
+
+.form-card {
+  background-color: var(--primary-color);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 700px;
+  border-top: 5px solid var(--accent-color);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.form-header h1 {
+  font-size: 1.8rem;
+  color: var(--text-on-primary);
+  margin-bottom: 10px;
+}
+
+.form-header p {
+  color: var(--text-on-primary);
+  font-family: var(--body-font);
+}
+
+/* Layout for rows (side-by-side inputs) */
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  flex: 1; /* Makes items in a row equal width */
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label styling */
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-on-primary);
+  font-family: var(--heading-font);
+  font-size: 1rem;
+}
+
+/* Input styling */
+.form-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  font-family: var(--body-font);
+  font-size: 1rem;
+  box-sizing: border-box; /* Ensures padding doesn't break layout */
+  transition: border-color 0.3s;
+}
+
+.form-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(94, 129, 82, 0.2);
+}
+
+/* Button Styling - Using your site's Green/Gold theme */
+.btn-submit {
+  width: 50%;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: var(--accent-color);
+  color: var(--text-on-primary);
+  border: none;
+  border-radius: 4px;
+  font-family: var(--heading-font);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: var(--accent2-color); /* Slightly darker on hover */
+}
+
+/* Error Messages */
+.invalid-feedback,
+.empty-feedback {
+  color: var(--accent2-color);
+  font-size: 0.85rem;
+  margin-top: 5px;
+  display: none; /* Hidden by default, shown when validation fails */
+}
+
+.result-message {
+  text-align: center;
+  margin-top: 15px;
+  color: white;
+  font-family: var(--heading-font);
+  font-size: 1.1rem;
+}
+
+/* success and error message */
+.success-text {
+  color: white;
+}
+
+.error-text {
+  color: #670101; /* Red */
+}
+
 @media screen and (min-width: 679px) {
   .hidden {
     display: unset;
@@ -379,5 +501,10 @@ footer p {
   .textual-content h3 {
     text-align: left;
     margin-top: 0;
+  }
+
+  .form-row {
+    flex-direction: row;
+    gap: 20px;
   }
 }

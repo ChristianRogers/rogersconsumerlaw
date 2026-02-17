@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jon H. Rogers, Attorney at Law</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <meta name="author" content="Jon Rogers" />
+    <meta
+      name="description"
+      content="Jon H. Rogers is a licensed, Utah Attorney with over 30 years of experience handling civil (as opposed to criminal) matters."
+    />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Jon H. Rogers, Attorney at Law</h1>
+      <button
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        ☰
+      </button>
+      <nav id="primary-navigation" class="hidden" aria-hidden="true">
+        <a href="index.html">Home</a>
+        <a href="SuedInUtah.html">Sued in Utah?</a>
+        <a href="#">Debt Collection</a>
+        <a href="#">Auto Law</a>
+        <a href="EstatePlanning.html">Estate Planning</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2 class="page-heading">Contact Us</h2>
+
+      <div class="contact-container">
+        <div class="form-card">
+          <div class="form-header">
+            <h1>Send us a Message</h1>
+            <p>Please fill out the form below.</p>
+          </div>
+
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            id="form"
+            class="contact-form needs-validation"
+            novalidate
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="66559338-9016-46d7-b453-2dd495e09614"
+            />
+            <input
+              type="hidden"
+              name="subject"
+              value="Rogers Consumer Law Website Contact Form Submission"
+            />
+            <input
+              type="checkbox"
+              name="botcheck"
+              id=""
+              style="display: none"
+            />
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first_name">First Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="first_name"
+                  placeholder="Jane"
+                  required
+                  class="form-input"
+                />
+                <div class="empty-feedback invalid-feedback">
+                  Please provide your first name.
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input
+                  type="text"
+                  name="last_name"
+                  id="lname"
+                  placeholder="Doe"
+                  required
+                  class="form-input"
+                />
+                <div class="empty-feedback invalid-feedback">
+                  Please provide your last name.
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="you@domain.com"
+                  required
+                  class="form-input"
+                />
+                <div class="empty-feedback invalid-feedback">
+                  Please provide a valid email.
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input
+                  type="text"
+                  name="phone"
+                  id="phone"
+                  placeholder="(801) 555-1234"
+                  class="form-input"
+                />
+                <div class="empty-feedback invalid-feedback">
+                  Please provide your phone number.
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                rows="5"
+                name="message"
+                id="message"
+                placeholder="Enter your message here..."
+                class="form-input"
+                required
+              ></textarea>
+              <div class="empty-feedback invalid-feedback">
+                Please enter your message.
+              </div>
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="btn-submit">Send Message</button>
+            </div>
+            <p class="result-message" id="result"></p>
+          </form>
+        </div>
+      </div>
+
+      <div class="contact-info">
+        <h3>Jon H. Rogers, Attorney at Law</h3>
+        <p>
+          Northgate Business Center <br />
+          <a
+            href="https://maps.app.goo.gl/JN5WUVHUZU1fHE3r6"
+            target="_blank"
+            rel="noopener noreferrer"
+            >825 North 300 West, Suite N144<br />Salt Lake City, Utah 84103</a
+          ><br />
+          <a href="tel:+18015326272">(801) 532-6272</a><br />
+          <a href="mailto:RogersConsumerLaw@gmail.com"
+            >RogersConsumerLaw@gmail.com</a
+          >
+        </p>
+      </div>
+    </main>
+    <footer>
+      <p id="legal-disclaimer">
+        As required by law: This Office is a Debt Relief Agency. Our Practice
+        Includes Helping People File for Relief Under Title 11 of the Federal
+        Bankruptcy Code.
+      </p>
+      <p>&copy; <span id="current-year"></span> Jon H. Rogers</p>
+    </footer>
+  </body>
+</html>
