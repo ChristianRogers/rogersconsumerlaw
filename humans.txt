@@ -1,13 +1,14 @@
 /* TEAM */  
-Your title: Your name.
-Site: email, link to a contact form, etc
-Twitter: your Twitter username.
-Location: City, Country.
+Developer: Christian Rogers
+Site: ChristianRogers.github.io
+Location: Rexburg, ID & Bountiful, UT
+Status: Cybersecurity student at Brigham Young University–Idaho
 
 /* THANKS */			
-Name: name or url
+Client: Jon H. Rogers
 
 /* SITE */   
-Last update: YYYY/MM/DD  
-Standards: HTML5, CSS3,..
+Last update: 2025/03
+Standards: HTML5, CSS3, Semantic Web
+Components: Web3Forms, Custom CSS (No Frameworks)
                             
