@@ -24,11 +24,19 @@ const navmenu = document.querySelector("nav");
 
 if (navbutton && navmenu) {
   navbutton.addEventListener("click", function () {
+    // 1. Toggle the visual hidden class
     navmenu.classList.toggle("hidden");
-    if (navmenu.classList.contains("hidden")) {
+
+    // 2. Check if it is currently hidden
+    const isHidden = navmenu.classList.contains("hidden");
+
+    // 3. Update the accessibility tags based on the state
+    if (isHidden) {
       navbutton.setAttribute("aria-expanded", "false");
+      navmenu.setAttribute("aria-hidden", "true");
     } else {
       navbutton.setAttribute("aria-expanded", "true");
+      navmenu.setAttribute("aria-hidden", "false");
     }
   });
 }
