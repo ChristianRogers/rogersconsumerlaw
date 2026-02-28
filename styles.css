@@ -30,7 +30,7 @@ body {
   min-height: 100vh;
 }
 
-/* Only show focus outlines when navigating with keyboard */
+/* Only show focus outlines when navigating with keyboard*/
 *:focus-visible {
   outline: 1px solid var(--accent2-color);
   outline-offset: 2px;
