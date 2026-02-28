@@ -30,6 +30,13 @@ body {
   min-height: 100vh;
 }
 
+/* Only show focus outlines when navigating with keyboard */
+*:focus-visible {
+  outline: 1px solid var(--accent2-color);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 header {
   background-color: var(--primary-color);
   color: var(--text-on-primary);
@@ -47,11 +54,26 @@ header h1 {
 }
 
 nav {
-  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+
+  /* Animation properties */
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transition: all 0.4s ease-in-out;
+}
+
+/*  Expanded */
+nav.open {
+  max-height: 600px;
+  opacity: 1;
+  margin-top: 1rem;
+  pointer-events: auto;
 }
 
 nav a {
@@ -450,7 +472,6 @@ details.legal-dropdown summary {
   list-style-position: inside;
 }
 
-/* Internal content wrapper for the dropdown */
 .dropdown-content {
   margin-top: 15px;
   padding-top: 15px;
@@ -458,6 +479,18 @@ details.legal-dropdown summary {
   font-size: 0.95rem;
   cursor: default; /* Reverts cursor back to normal text pointer when reading */
   color: var(--text-on-accent);
+  opacity: 0;
+}
+
+details[open] .dropdown-content {
+  animation: fadeIn 0.15s ease-in-out forwards;
+}
+
+/* Define the fade-in animation for dropdown content */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 .dropdown-content ul {
@@ -496,11 +529,19 @@ details.legal-dropdown summary {
 }
 
 @media screen and (min-width: 679px) {
+  header h1 {
+    margin-bottom: 10px;
+  }
+
   nav.hidden {
     display: flex;
   }
 
   nav {
+    max-height: none;
+    opacity: 1;
+    pointer-events: auto;
+    overflow: visible;
     flex-direction: row;
     justify-content: center;
     flex-wrap: nowrap;
@@ -510,15 +551,16 @@ details.legal-dropdown summary {
   }
 
   nav a {
-    border-bottom: none;
-    padding-bottom: 0;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 4px;
     margin: 0;
-    font-size: clamp(0.9rem, 1vw + 0.5rem, 1rem);
+    font-size: clamp(0.9rem, calc(1vw + 0.5rem), 1rem);
     white-space: nowrap;
+    transition: border-color 0.1s ease-in-out;
   }
 
   nav a:hover {
-    border-bottom: 2px solid var(--accent2-color);
+    border-bottom-color: var(--accent2-color);
   }
 
   .menu-toggle {
